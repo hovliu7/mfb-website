@@ -1,0 +1,174 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.home-background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Use 100% of the viewport width */
+    height: auto; /* Use 100% of the viewport height */
+    object-fit: cover; /* Ensures the image covers the entire screen without distorting */
+    z-index: -1; /* Places the image behind other content */
+}
+
+
+header {
+    padding: 0 20px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    /* border-style: solid;
+    border-color: red;
+    border-width: 1px; */
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+#mfb-logo {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* border-style: solid;
+    border-color: red;
+    border-width: 1px; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    /* border-style: solid;
+    border-color: red;
+    border-width: 1px; */
+}
+
+nav ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease
+}
+
+nav ul a:hover {
+    color: #136F64;
+    text-decoration: none;
+}
+
+nav ul li {
+    padding: 5px;
+    margin-left: 10px;
+    font-family: "Poppins"
+}
+
+/* Hamburger icon */
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* styling for when hamburger icon is clicked */
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 30vh;
+    list-style: none;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    background-color: #136F64;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.mobile-menu a {
+    color: white; /* White text */
+    font-family: 'Poppins';
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    width: 100%;
+}
+
+.mobile-menu li {
+    display: flex;
+    align-items: center; /* Vertically align text inside each list item */
+    justify-content: center; /* Horizontally center text */
+    padding: 8px 0; /* Add padding for space between links */
+    width: 100%; /* Ensure each list item takes full width of the menu */
+}
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+}
+
+/* title text */
+.title {
+    width: 100vw;
+    margin-top: 5vh;
+}
+
+.title p {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 6vw;
+    text-align: center;
+}

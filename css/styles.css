@@ -351,7 +351,7 @@ nav ul li {
     object-fit: cover;
   }
 
-  .section-4 {
+.section-4 {
     background-image: url('../images/berkeley.png');
     background-size: cover; /* Ensures the image covers the section */
     background-position: center;
@@ -376,7 +376,6 @@ nav ul li {
     font-weight: 600;
     color: #136F64;
     font-size: 50px;
-
     margin: 0 0;
 
     /* border-color: red;
@@ -387,10 +386,56 @@ nav ul li {
   .info-section-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  
+  .info-section-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    background: rgba(255, 255, 255, .8);
+
+    width: 25vw;
+    height: 550px;
+
+    /* border-color: red;
+    border-width: 1px;
+    border-style: solid; */
   }
 
   .info-section-item img {
     width: 20vw;
+    /* border-color: red;
+    border-width: 1px;
+    border-style: solid; */
+  }
+
+  .info-section-item h2 {
+    font-family: 'Roboto';
+    font-weight: 600;
+    width: 20vw;
+    text-align: left;
+
+    /* border-color: red;
+    border-width: 1px;
+    border-style: solid; */
+  }
+
+  .info-section-item p {
+    font-family: 'Roboto';
+    font-size: 17px;
+    line-height: 1.5;
+    width: 20vw;
+    text-align: left;
+    margin-top: 0px;
+
+    /* border-color: red;
+    border-width: 1px;
+    border-style: solid; */
   }
 
   @media only screen and (max-width: 768px) {

@@ -6,28 +6,24 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.home-background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;  /* Use 100% of the viewport width */
-    height: auto; /* Use 100% of the viewport height */
-    object-fit: cover; /* Ensures the image covers the entire screen without distorting */
-    z-index: -1; /* Places the image behind other content */
-}
-
-
 header {
-    padding: 0 20px;
+    padding: 20px 20px;
     height: 50px;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-left: 5vw;
+    margin-right: 5vw;
     /* border-style: solid;
     border-color: red;
     border-width: 1px; */
-    margin-left: 5vw;
-    margin-right: 5vw;
+}
+
+.title-section {
+    background-image: url('../images/section1background.jpeg');
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center;
+    height: 100vh;
 }
 
 #mfb-logo {
@@ -113,9 +109,9 @@ nav ul li {
     width: 80vw;
     height: 30vh;
     list-style: none;
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 1px;
+    border-width: 1px; */
     background-color: #136F64;
 }
 
@@ -127,26 +123,333 @@ nav ul li {
     transform: translateX(-50%);
     height: calc(100vh - 50px);
     width: 100%;
+    padding: 0;
 }
 
 .mobile-menu a {
-    color: white; /* White text */
+    color: white;
     font-family: 'Poppins';
     text-decoration: none;
     transition: color 0.3s ease;
     text-align: center;
-    border-style: solid;
+    /* border-style: solid;
     border-color: red;
-    border-width: 1px;
+    border-width: 1px; */
     width: 100%;
 }
 
 .mobile-menu li {
     display: flex;
-    align-items: center; /* Vertically align text inside each list item */
-    justify-content: center; /* Horizontally center text */
-    padding: 8px 0; /* Add padding for space between links */
-    width: 100%; /* Ensure each list item takes full width of the menu */
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%; 
+    /* border-style: solid;
+    border-color: red;
+    border-width: 1px; */
+}
+
+
+/* title text */
+.title {
+    width: 100vw;
+    margin-top: 40px;
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+    
+}
+
+.title p {
+    color: white;
+    font-family: 'Poppins', serif;
+    font-weight: 700;
+    font-size: 6vw;
+    text-align: center;
+    margin: 0 0;
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+    
+}
+
+/* tagline */
+.tagline {
+    width: 100vw;
+    margin-top: 20px;
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center;
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+}
+
+.tagline p {
+    color: white;
+    font-family: 'Roboto', serif;
+    font-size: 2vw;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 0;
+}
+
+/* Join Us Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+}
+
+.join-us-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 1.7vw;
+    background-color: #136F64;
+    border-radius: 50px;
+    padding: 1.0vw 3.5vw;
+}
+
+/* Statistics section */
+/* Basic styling for squares */
+.square-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 10px; */
+    margin: 20px;
+    place-items: center;
+
+    /* border-style: solid;
+    border-color: red;
+    border-width: 1px; */
+  }
+  
+  .square {
+    background-color: #EFEFEF;
+    height: 15vw;
+    width: 20vw;
+    color: #136F64;
+    font-family: 'Roboto', serif;
+    font-weight: 700;
+
+    padding: 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+
+    /* border-style: solid;
+    border-color: red;
+    border-width: 1px; */
+  }
+  
+  .number {
+    font-size: 6vw;
+    margin: 0 0;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: baseline;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1;
+
+    /* border-style: solid;
+    border-color: red;
+    border-width: 1px; Align number and suffix */
+  }
+  
+  .animated-number {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 4px;
+    line-height: 1; /* Space between the number and "K" */
+  }
+  
+  .suffix {
+    font-size: 6vw; /* Keep "K" the same size */
+  }
+  
+  /* For squares other than the first one (without "K") */
+  .square .number:not(:first-child) .suffix {
+    display: none; /* Hide the "K" for all squares except the first one */
+  }
+  
+  .text {
+    font-size: 1.5vw;
+  }
+
+  /* Section 3 */
+
+  .section-3-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 0 0;
+
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+  }
+
+  .section-3-title p {
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    color: #136F64;
+    font-size: 50px;
+
+    margin: 0 0;
+
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+  }
+
+  .section-3-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+  }
+
+  .section-3-content p {
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    max-width: 40%;
+
+    line-height: 2;
+    margin: 0;
+    flex: 1;
+
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+
+  }
+
+  .section-3-content img {
+    flex: 1; /* Make the image container take up 50% of the space */
+    max-width: 40%; /* Ensures the image fits within its container */
+    height: auto; /* Maintains the image aspect ratio */
+    object-fit: cover;
+  }
+
+  .section-4 {
+    background-image: url('../images/berkeley.png');
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center;
+    height: 100vh;
+    padding-top: 30px;
+}
+
+  .section-4-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 0 0;
+
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+  }
+
+  .section-4-title p {
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    color: #136F64;
+    font-size: 50px;
+
+    margin: 0 0;
+
+    /* border-color: red;
+    border-style: solid;
+    border-width: 1px; */
+  }
+
+  .info-section-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info-section-item img {
+    width: 20vw;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .tagline {
+        margin-top: 20px;
+    }
+
+    .button-container {
+        margin-top: 60px;
+    }
+
+    .square-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    /* Stats grid */
+    .square {
+        height: 30vw;
+        width: 40vw;
+        gap: 15px;
+    }
+
+    .number, .suffix {
+        font-size: 14vw;
+    }
+
+    .title-section {
+        height: 80vw;
+    }
+
+    .text {
+        font-size: 3vw;
+    }
+
+    .section-3-title p {
+        font-size: 40px;
+    }
+
+    .section-3-title {
+        margin-bottom: 0px;
+    }
+
+    .section-3-content {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .section-3-content p {
+        font-size: 15px;
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .section-3-content img {
+        max-width: 70%;
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -157,18 +460,63 @@ nav ul li {
     #hamburger-icon {
         display: block;
     }
-}
 
-/* title text */
-.title {
-    width: 100vw;
-    margin-top: 5vh;
-}
+    .tagline {
+        margin-top: 10px;
+    }
 
-.title p {
-    color: white;
-    font-family: 'Poppins';
-    font-weight: 700;
-    font-size: 6vw;
-    text-align: center;
+    .button-container {
+        margin-top: 20px;
+    }
+
+    .square-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    /* Stats grid */
+    .square {
+        height: 30vw;
+        width: 40vw;
+        gap: 15px;
+    }
+
+    .number, .suffix {
+        font-size: 14vw;
+    }
+
+    .title-section {
+        height: 80vw;
+    }
+
+    .home-background-image {
+        /* You can adjust styles for mobile here if necessary */
+        width: 100%;
+        height: auto;
+    }
+
+    .title-section {
+        height: 80vw;
+    }
+
+    .section-3-title {
+        margin-bottom: 0px;
+    }
+
+    .section-3-content {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .section-3-content p {
+        font-size: 15px;
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .section-3-content img {
+        max-width: 70%;
+        margin-bottom: 20px;
+    }
 }

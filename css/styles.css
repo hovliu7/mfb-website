@@ -19,11 +19,26 @@ header {
     border-width: 1px; */
 }
 
+.text-green {
+    color: #136F64
+}
+
 .title-section {
     background-image: url('../images/section1background.jpeg');
     background-size: cover; /* Ensures the image covers the section */
     background-position: center;
+}
+
+.index-page .title-section {
+    background-image: url('../images/section1background.jpeg');
     height: 100vh;
+}
+
+
+/* About page styles */
+.about-page .title-section {
+    background-image: url('../images/about-background.png');
+    height: 61.57vh;
 }
 
 #mfb-logo {
@@ -143,7 +158,7 @@ nav ul li {
     align-items: center;
     padding-top: 8px;
     padding-bottom: 8px;
-    width: 100%; 
+    width: 100%;
     /* border-style: solid;
     border-color: red;
     border-width: 1px; */
@@ -157,7 +172,7 @@ nav ul li {
     /* border-color: red;
     border-style: solid;
     border-width: 1px; */
-    
+
 }
 
 .title p {
@@ -170,7 +185,10 @@ nav ul li {
     /* border-color: red;
     border-style: solid;
     border-width: 1px; */
-    
+}
+
+.about-page .title p {
+    margin-top: 13vh
 }
 
 /* tagline */
@@ -228,7 +246,7 @@ nav ul li {
     border-color: red;
     border-width: 1px; */
   }
-  
+
   .square {
     background-color: #EFEFEF;
     height: 15vw;
@@ -250,7 +268,7 @@ nav ul li {
     border-color: red;
     border-width: 1px; */
   }
-  
+
   .number {
     font-size: 6vw;
     margin: 0 0;
@@ -266,25 +284,42 @@ nav ul li {
     border-color: red;
     border-width: 1px; Align number and suffix */
   }
-  
+
   .animated-number {
     padding-top: 0;
     padding-bottom: 0;
     margin-right: 4px;
     line-height: 1; /* Space between the number and "K" */
   }
-  
+
   .suffix {
     font-size: 6vw; /* Keep "K" the same size */
   }
-  
+
   /* For squares other than the first one (without "K") */
   .square .number:not(:first-child) .suffix {
     display: none; /* Hide the "K" for all squares except the first one */
   }
-  
+
   .text {
     font-size: 1.5vw;
+  }
+
+  /* About Page Description */
+
+  .about-page .about-description{
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    max-width: 70%;
+
+    line-height: 2;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+
+    margin-top: 250px
   }
 
   /* Section 3 */
@@ -389,7 +424,7 @@ nav ul li {
     justify-content: space-evenly;
     align-items: stretch;
   }
-  
+
   .info-section-item {
     display: flex;
     flex-direction: column;

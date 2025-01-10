@@ -11,7 +11,6 @@ header {
     height: 50px;
     display: flex;
     justify-content: space-between;
-    /* margin-top: 20px; */
     margin-left: 5vw;
     margin-right: 5vw;
     /* border-style: solid;
@@ -355,7 +354,6 @@ nav ul li {
   }
 
 /* Section 4 */
-
 .section-4 {
     background-image: url('../images/berkeley.png');
     background-size: cover; /* Ensures the image covers the section */
@@ -363,10 +361,6 @@ nav ul li {
     background-repeat: no-repeat;
 
     height: 800px;
-
-    border-color: red;
-    border-style: solid;
-    border-width: 1px;
 }
 
   .section-4-title {

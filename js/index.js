@@ -47,5 +47,3 @@ const counters = document.querySelectorAll('.animated-number');
 counters.forEach(counter => {
     observer.observe(counter);
 });
-
-

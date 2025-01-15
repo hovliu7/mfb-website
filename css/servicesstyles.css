@@ -7,7 +7,7 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
 }
 
 header {
@@ -17,22 +17,14 @@ header {
     justify-content: space-between;
     margin-left: 5vw;
     margin-right: 5vw;
-
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
 }
 
 .title-section {
     background-image: url('../images/services/services-background.png');
-    background-size: cover; /* Ensures the image covers the section */
+    background-size: cover; 
     background-position: center;
     height: 60vh;
     width: 100vw;
-
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
 }
 
 #mfb-logo {
@@ -40,9 +32,6 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
 }
 
 nav {
@@ -50,9 +39,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin-left: 50px;
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
 }
 
 nav ul {
@@ -118,9 +104,6 @@ nav ul li {
     width: 80vw;
     height: 30vh;
     list-style: none;
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
     background-color: #136F64;
 }
 
@@ -141,9 +124,6 @@ nav ul li {
     text-decoration: none;
     transition: color 0.3s ease;
     text-align: center;
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
     width: 100%;
 }
 
@@ -153,18 +133,12 @@ nav ul li {
     padding-top: 8px;
     padding-bottom: 8px;
     width: 100%; 
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
 }
 
 /* title text */
 .title {
     width: 100vw;
     margin-top: 40px;
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
 }
 
 .title p {
@@ -174,9 +148,6 @@ nav ul li {
     font-size: 6vw;
     text-align: center;
     margin: 0 0;
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
 }
 
 /* Section 2 */
@@ -184,7 +155,7 @@ nav ul li {
     text-align: center;
 }
 
-.services-section-2 p {
+.section-2-title {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 20px;
@@ -205,17 +176,19 @@ nav ul li {
     flex-direction: column;
     width: 40vw;
     align-items: center;
+    font-family: 'Roboto'
 }
 
 .services-info-container h1 {
     font-family: 'Roboto';
     font-weight: 600;
+    font-size: 2vw;
 }
 
 .services-info-container p {
     margin: 0 0 0 0;
     width: 80%;
-    font-size: 17px;
+    font-size: 1.2vw;
     line-height: 2;
 }
 
@@ -235,18 +208,15 @@ nav ul li {
     font-family: 'Roboto';
     font-weight: 600;
     font-size: 50px;
+    margin-bottom: 0px;
 }
 
 /* Section 3 Grid */
 .square-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 20px;
+    margin-top: 50px;
     place-items: center;
-
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
 }
 
 .square {
@@ -266,10 +236,6 @@ nav ul li {
     text-align: center;
 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
   }
 
 .content img {
@@ -286,7 +252,44 @@ nav ul li {
     font-size: 1.2vw;
 }
 
-  /* Footer */
+/* Section 4 - Past Clients */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.image-container img {
+    width: 90vw;
+    margin-top: 20px;
+}
+
+/* Section 5 - Business Inquiries */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.button-container a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 2vw;
+    background-color: #136F64;
+    border-radius: 50px;
+    padding: 1vw 3vw;
+
+    margin-top: 20px;
+
+    transition: color 0.3s ease;
+}
+
+/* Footer */
 footer {
     width: 100%;
     background-color: #136F64;
@@ -334,16 +337,115 @@ footer {
 
 @media only screen and (max-width: 768px) {
     /* Section 1*/
-    .title p {
-        font-size: 50px;
+    .title {
+        margin-top: 20px;
     }
 
     .title-section {
-        height: 80vw;
+        height: 50vw;
+    }
+
+    .title p {
+        font-size: 10vw;
+    }
+
+    /* Section 2 */
+    .services-section-2 {
+        align-items: center;
+    }
+
+    .section-2-title {
+        margin-top: 200px;
+        margin-bottom: 0px;
+        width: 80%; 
+        margin: 200px auto 0; 
     }
 
     .text {
         font-size: 3vw;
+    }
+
+    .services-info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    .services-info-text-container {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        align-items: center;
+    }
+
+    .services-info-container h1 {
+        font-family: 'Roboto';
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    /* Reorder elements for mobile view */
+    .services-info-container:nth-of-type(2) .services-info-text-container {
+        order: 2;
+    }
+
+    .services-info-container:nth-of-type(2) img {
+        order: 1;
+    }
+    
+    .services-info-container p {
+        margin: 0 0 0 0;
+        width: 100%;
+        font-size: 14px;
+        line-height: 2;
+    }
+    
+    .services-info-container img {
+        width: 80vw;
+        height: auto;
+    }
+
+    /* Section 3 Title */
+    .title-container p {
+        font-size: 40px;
+    }
+
+    /* Section 3 Grid */
+    .square-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        width: fit-content; 
+        margin: 50px auto 0;
+    }
+
+    .square {
+        height: 35vw;
+        width: 30vw;
+        gap: 15px;
+    }
+
+    .content h1 {
+        font-size: 3vw;
+    }
+    
+    .details {
+        font-weight: 400;
+        font-size: 2vw;
+    }
+
+    /* Section 5 - Button */
+    .button-container {
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    
+    .button-container a {
+        font-size: 3vw;
+        padding: 1.5vw 3.5vw;
+    
+        margin-top: 20px;
     }
     
     /* Footer */
@@ -371,11 +473,64 @@ footer {
     }
 
     /* Section 1 */
-    .title {
-        margin-top: 0px;
+    .title-section {
+        height: 50vw;
     }
+
+    .title {
+        margin-top: 0.2vh;
+    }
+
     .title p {
-        font-size: 35px;
+        font-size: 10vw;
+    }
+
+    /* Section 2 */
+    .section-2-title {
+        font-size: 14px;
+        text-align: center;
+
+        width: 80%;           
+        margin: 22vw auto 0;  
+    }
+    /* Section 3 */
+    .title-container p {
+        font-size: 30px;
+    }
+
+    /* Section 3 Grid */
+    .square-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        width: fit-content; 
+        margin: 50px auto 0;
+    }
+
+    .square {
+        height: 35vw;
+        width: 30vw;
+        gap: 15px;
+    }
+
+    .content h1 {
+        font-size: 3vw;
+    }
+    
+    .details {
+        font-weight: 400;
+        font-size: 2vw;
+    }
+    
+    /* Section 5 - CONTACT US Button */
+    .button-container {
+        margin-top: 0px;
+        margin-bottom: 60px;
+    }
+    
+    .button-container a {
+        font-size: 4vw;
+        padding: 1.5vw 3.5vw;
+        margin-top: 20px;
     }
 
     /* Footer */

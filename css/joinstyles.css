@@ -219,6 +219,10 @@ footer {
     transition: color 0.3s ease;
 }
 
+#application-button-container a:hover {
+    color: #062623; /* Change the text color on hover */
+}
+
 /* Section 2 - Information */
 .join-s2 {
     text-align: center;
@@ -326,6 +330,10 @@ footer {
     margin-top: 1vw;
 
     transition: color 0.3s ease;
+}
+
+.join-button-container a:hover {
+    color: #062623; /* Change the text color on hover */
 }
 
 /* Timeline line elements */

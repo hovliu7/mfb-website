@@ -137,7 +137,7 @@ nav ul li {
 /* Title Section */
 .title-section {
     background-image: url('../images/team/team-background.png');
-    background-size: 110%;
+    background-size: cover;
     background-position: 20% 55%;
     height: 61vh;
 }
@@ -168,7 +168,7 @@ nav ul li {
 
 .portrait-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(auto, 300px));
     gap: 30px;
     margin: 0 auto;
     max-width: 1800px;
@@ -190,6 +190,86 @@ nav ul li {
     margin-bottom: 15px;
     overflow: hidden;
     position: relative;
+}
+
+.portrait-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.portrait-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+
+.flip-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide text during flip */
+    overflow: hidden;
+}
+
+/* The back side should be rotated 180 degrees so it's hidden initially */
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #136F64; /* or any background color you like */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flip-card-back .year-major,
+.flip-card-back .hobbies {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.flip-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.flip-socials .icon {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.flip-socials .icon:hover {
+    transform: scale(1.2);
 }
 
 /* Individual portrait styles */
@@ -438,10 +518,60 @@ footer {
     font-weight: 700;
 }
 
+@media only screen and (max-width: 1200px) {
+    .executive-board .portrait-grid,
+    .board .portrait-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 300px));
+        gap: 25px;
+    }
+
+    /* Handle last row items for executive board */
+    .executive-board .portrait-grid .portrait-card:last-child:nth-child(3n-1) {
+        grid-template-columns: repeat(3, minmax(auto, 300px));
+    }
+
+    /* Handle last row items for board */
+    .board .portrait-grid .portrait-card:last-child:nth-child(3n-1) {
+        grid-column: 1 / span 3;
+    }
+
+    .executive-board-title,
+    .board-title {
+        font-size: 45px;
+        margin-bottom: 40px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .title p {
         font-size: 50px;
         margin-top: 10vh;
+    }
+
+    .executive-board .portrait-grid,
+    .board .portrait-grid {
+        grid-template-columns: repeat(2, minmax(auto, 280px));
+    }
+
+    .portrait,
+    .flip-card {
+        width: 280px;
+        height: 373px; /* Maintains aspect ratio */
+    }
+
+    .executive-board-title,
+    .board-title {
+        font-size: 40px;
+        margin-bottom: 35px;
+    }
+
+    .portrait-name {
+        font-size: 18px;
+    }
+
+    .portrait-title {
+        font-size: 15px;
     }
 
     /* Footer */
@@ -471,6 +601,43 @@ footer {
 
     .title p {
         font-size: 35px;
+    }
+
+    .executive-board .portrait-grid,
+    .board .portrait-grid {
+        grid-template-columns: repeat(2, minmax(auto, 240px));
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .portrait,
+    .flip-card {
+        width: 240px;
+        height: 320px;
+    }
+
+    .executive-board-title,
+    .board-title {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .portrait-name {
+        font-size: 16px;
+    }
+
+    .portrait-title {
+        font-size: 14px;
+    }
+
+    .flip-card-back .year-major,
+    .flip-card-back .hobbies {
+        font-size: 13px;
+    }
+
+    .flip-socials .icon {
+        width: 20px;
+        height: 20px;
     }
 
     /* Footer */

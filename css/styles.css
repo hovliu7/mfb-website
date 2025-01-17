@@ -223,21 +223,15 @@ nav ul li {
 }
 
 .join-us-button:hover {
-    color: #062623; /* Change the text color on hover */
-    text-decoration: none; /* Ensure no underline appears on hover */
+    color: #062623;
 }
 
 /* Statistics section */
 .square-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 10px; */
     margin: 20px;
     place-items: center;
-
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
   }
   
   .square {
@@ -258,10 +252,6 @@ nav ul li {
     text-align: center;
 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; */
   }
   
   .number {
@@ -274,21 +264,17 @@ nav ul li {
     padding-top: 0;
     padding-bottom: 0;
     line-height: 1;
-
-    /* border-style: solid;
-    border-color: red;
-    border-width: 1px; Align number and suffix */
   }
   
   .animated-number {
     padding-top: 0;
     padding-bottom: 0;
     margin-right: 4px;
-    line-height: 1; /* Space between the number and "K" */
+    line-height: 1; 
   }
   
   .suffix {
-    font-size: 6vw; /* Keep "K" the same size */
+    font-size: 6vw; 
   }
   
   /* For squares other than the first one (without "K") */
@@ -307,10 +293,6 @@ nav ul li {
     margin-top: 50px;
     margin-bottom: 40px;
     padding: 0 0;
-
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
   }
 
   .section-3-title p {
@@ -320,10 +302,6 @@ nav ul li {
     font-size: 50px;
 
     margin: 0 0;
-
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
   }
 
   .section-3-content {
@@ -333,10 +311,6 @@ nav ul li {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
   }
 
   .section-3-content p {
@@ -349,41 +323,29 @@ nav ul li {
     line-height: 2;
     margin: 0;
     flex: 1;
-
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
   }
 
   .section-3-content img {
-    flex: 1; /* Make the image container take up 50% of the space */
-    max-width: 40%; /* Ensures the image fits within its container */
-    height: auto; /* Maintains the image aspect ratio */
+    flex: 1;
+    max-width: 40%; 
+    height: auto; 
     object-fit: cover;
   }
 
 /* Section 4 */
 .section-4 {
     background-image: url('../images/home/berkeley.png');
-    background-size: cover; /* Ensures the image covers the section */
+    background-size: cover; 
     background-position: center;
     width: 100vw;
 
     height: 800px;
-
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
 }
 
   .section-4-title {
     display: flex;
     justify-content: center;
     padding: 0 0;
-
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
   }
 
   .section-4-title p {
@@ -392,10 +354,6 @@ nav ul li {
     color: #136F64;
     font-size: 50px;
     margin-top: 40px;
-
-    /* border-color: red;
-    border-style: solid;
-    border-width: 1px; */
   }
 
   .info-section-container {
@@ -416,17 +374,10 @@ nav ul li {
 
     width: 25vw;
     height: 550px;
-
-    /* border-color: red;
-    border-width: 1px;
-    border-style: solid; */
   }
 
   .info-section-item img {
     width: 20vw;
-    /* border-color: red;
-    border-width: 1px;
-    border-style: solid; */
   }
 
   .info-section-item h2 {
@@ -434,10 +385,6 @@ nav ul li {
     font-weight: 600;
     width: 20vw;
     text-align: left;
-
-    /* border-color: red;
-    border-width: 1px;
-    border-style: solid; */
   }
 
   .info-section-item p {
@@ -447,10 +394,6 @@ nav ul li {
     width: 20vw;
     text-align: left;
     margin-top: 0px;
-
-    /* border-color: red;
-    border-width: 1px;
-    border-style: solid; */
   }
 
   /* Section 5 Styling */
@@ -538,6 +481,10 @@ nav ul li {
     font-size: 12px;
   }
 
+  .mobile-info-section-container {
+    display: none;
+  }
+
   @media only screen and (max-width: 768px) {
     /* Section 1*/
     .title p {
@@ -609,22 +556,79 @@ nav ul li {
         max-width: 70%;
         margin-bottom: 20px;
     }
-
-    .info-section-item h2 {
-        font-size: 20px;
-    }
-    
-    .info-section-item p {
-        font-size: 15px;
+    /* Section 4 */
+    .info-section-container {
+        display: none;
     }
 
-    .info-section-item {
-        height: 450px;
+    .section-4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding-bottom: 60px;
+    }
+
+    .slides-container {
+        width: 80vw;
+        object-fit: cover;
+        background-color: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .mobile-info-section-container {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Roboto';
       }
     
-      /* Section 4 */
-      .section-4 {
-        height: 700px;
+      .mobile-info-section-item img {
+        width: 60vw;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .mobile-info-section-item {
+        display: none;
+        opacity: 0;
+      }
+
+      .mobile-info-section-item h2 {
+        width: 60vw;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .mobile-info-section-item p {
+        width: 60vw;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .mobile-info-section-item[data-active] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 1;
+      }
+
+      .carousel-button {
+        background: none;
+        border: none;
+        color: white;
+      }
+
+      .carousel-button:hover {
+        cursor:grab;
+      }
+
+      .carousel-button img {
+        width: 50px;
       }
 
     /* Section 5 */
@@ -754,8 +758,14 @@ nav ul li {
     }
 
     /* Section 4 */
+    .section-4 {
+        padding-bottom: 0px;
+        height: 700px;
+    }
+
     .section-4-title p {
         font-size: 30px;
+        margin-top: 0px;
     }
 
     /* Section 5 */

@@ -22,6 +22,10 @@ header {
     border-width: 1px; */
 }
 
+header a:hover {
+    cursor: grab;
+}
+
 .title-section {
     background-image: url('../images/home/section1background.jpeg');
     background-size: cover; /* Ensures the image covers the section */

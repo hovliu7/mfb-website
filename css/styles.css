@@ -27,18 +27,7 @@ header {
     background-image: url('../images/section1background.jpeg');
     background-size: cover; /* Ensures the image covers the section */
     background-position: center;
-}
-
-.index-page .title-section {
-    background-image: url('../images/section1background.jpeg');
     height: 100vh;
-}
-
-
-/* About page styles */
-.about-page .title-section {
-    background-image: url('../images/about-background.png');
-    height: 61.57vh;
 }
 
 #mfb-logo {
@@ -187,10 +176,6 @@ nav ul li {
     border-width: 1px; */
 }
 
-.about-page .title p {
-    margin-top: 13vh
-}
-
 /* tagline */
 .tagline {
     width: 100vw;
@@ -303,23 +288,6 @@ nav ul li {
 
   .text {
     font-size: 1.5vw;
-  }
-
-  /* About Page Description */
-
-  .about-page .about-description{
-    font-family: 'Roboto', serif;
-    font-weight: 400;
-    font-size: 20px;
-
-    max-width: 70%;
-
-    line-height: 2;
-    margin: 0 auto;
-    flex: 1;
-    text-align: center;
-
-    margin-top: 250px
   }
 
   /* Section 3 */
@@ -473,7 +441,137 @@ nav ul li {
     border-style: solid; */
   }
 
-  @media only screen and (max-width: 768px) {
+/* About Page Styles */
+
+/* About page styles */
+.about-page .title-section {
+    background-image: url('../images/about-background.png');
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-page .title p {
+    margin-top: 13vh
+}
+
+/* Adjust about-description for smaller screens */
+.about-description {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px; /* Reduce top margin for better responsiveness */
+    padding: 0 5%; /* Add padding for smaller screen readability */
+}
+
+
+.about-page .about-description p {
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    font-size: 20px;
+    max-width: 70%;
+    line-height: 1.6; /* Slightly tighter line spacing for smaller screens */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .about-page .about-description {
+        margin-top: 5%; /* Reduce margin further for smaller screens */
+        padding: 0 10%; /* Add padding for better readability */
+    }
+
+    .about-page .about-description p {
+        font-size: 18px; /* Reduce font size slightly */
+        max-width: 90%; /* Allow text to span a larger area */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-page .about-description {
+        margin-top: 2%; /* Minimal margin for very small screens */
+        padding: 0 5%; /* Smaller padding */
+    }
+
+    .about-page .about-description p {
+        font-size: 16px; /* Further reduce font size */
+    }
+}
+
+.about-page .history-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 0 0;
+}
+
+.about-page .history-title p {
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    color: #136F64;
+    font-size: 50px;
+    margin: 0 0;
+}
+
+/* 1. Turn the .history-content container into a 1x1 grid */
+.about-page .history-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* optional: set width/height, or let content size it naturally */
+    width: 1500px;
+    height: 100vh;
+}
+
+/* 2. Crop your image and make it fill the whole grid cell */
+.about-page .history-content img {
+    /* Place this <img> in the single grid cell (row 1, col 1) */
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+
+    /* same cropping you had before */
+    width: 1500px;
+    height: 100vh;
+    object-fit: cover;
+    clip-path: inset(23% 0% 0% 20%); /* top 10%, left 20% cropped, etc. */
+    display: block;
+    border: none;
+}
+
+/* 3. Overlap the text box in the *same* cell, near the top-right */
+.about-page .history-content-box {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+
+    /* Let grid place it top-right */
+    justify-self: end;  /* push box to the right edge */
+    align-self: start;  /* push box to the top edge */
+
+    /* Add some “breathing room” from top/right edges */
+    margin-top: 20%;    /* roughly 80% from bottom if you prefer that look */
+    margin-right: 10%;  /* or 20%, tweak as desired */
+
+    /* styling */
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.about-page .history-content-box p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem; /* Default size for paragraphs */
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.about-page .history-content-box p:first-of-type {
+    font-size: 1.3rem; /* Larger font size for the first paragraph */
+    font-weight: bold; /* Ensures bold text */
+}
+
+@media only screen and (max-width: 768px) {
     .tagline {
         margin-top: 20px;
     }

@@ -41,7 +41,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, { threshold: 0.5 }); 
 
-const counters = document.querySelectorAll('.animated-number');
+const counters = document.querySelectorAll('.home-s2-square-animated-number');
 
 // Observe each counter
 counters.forEach(counter => {

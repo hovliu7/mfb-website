@@ -257,9 +257,9 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     margin: 20px;
     place-items: center;
-  }
+}
   
-  .home-s2-square {
+.home-s2-square {
     background-color: #EFEFEF;
     height: 15vw;
     width: 20vw;
@@ -277,9 +277,9 @@ footer {
     text-align: center;
 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .home-s2-square-number {
+}
+
+.home-s2-square-number {
     font-size: 6vw;
     margin: 0 0;
     font-weight: bold;
@@ -289,27 +289,27 @@ footer {
     padding-top: 0;
     padding-bottom: 0;
     line-height: 1;
-  }
-  
-  .home-s2-square-animated-number {
+}
+
+.home-s2-square-animated-number {
     padding-top: 0;
     padding-bottom: 0;
     margin-right: 4px;
     line-height: 1; 
-  }
-  
-  .home-s2-square-suffix {
+}
+
+.home-s2-square-suffix {
     font-size: 6vw; 
-  }
-  
-  /* For squares other than the first one (without "K") */
-  .home-s2-square .home-s2-square-number:not(:first-child) .home-s2-square-suffix {
+}
+
+/* For squares other than the first one (without "K") */
+.home-s2-square .home-s2-square-number:not(:first-child) .home-s2-square-suffix {
     display: none;
-  }
-  
-  .home-s2-square-text {
+}
+
+.home-s2-square-text {
     font-size: 1.5vw;
-  }
+}
 
 /* --- Section 3 (Who We Are) --- */
   .home-s3-title {
@@ -532,6 +532,7 @@ footer {
         font-size: 3vw;
     }
 
+    /* --- Section 3 (Who We Are) --- */
     .home-s3-title p {
         font-size: 40px;
     }
@@ -556,7 +557,8 @@ footer {
         max-width: 70%;
         margin-bottom: 20px;
     }
-    /* Section 4 */
+    
+    /* --- Section 4 (What We Do) --- */
     .home-s4-info-container {
         display: none;
     }
@@ -631,7 +633,7 @@ footer {
         width: 50px;
     }
 
-    /* Section 5 */
+    /* --- Section 5 (Where We Work) --- */
     .home-s5-title {
         margin-top: 50px;
     }
@@ -783,7 +785,7 @@ footer {
         margin-top: 0px;
     }
 
-    /* Section 5 */
+    /*-- Section 5 (Where We Work) --*/
     .home-s5 {
         padding-top: 20px;
         padding-bottom: 20px;

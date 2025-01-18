@@ -139,17 +139,21 @@ nav ul li {
     background-image: url('../images/about/about-background.png');
     background-size: cover;
     background-position: center;
-    height: 61vh;
+    height: 60vh;
 }
 
 .title {
+    width: 100vw;
+    margin-top: 40px;
+}
+
+.title p {
     color: white;
     font-family: 'Poppins', serif;
     font-weight: 700;
-    font-size: 6vw;
+    font-size: 70px;
     text-align: center;
-    margin: 0px;
-    margin-top: 13vh;
+    margin: 0 0;
 }
 
 .about-description {
@@ -313,9 +317,16 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    .title-section {
+        height: 50vw;
+    }
+
+    .title {
+        margin-top: 20px;
+    }
+
     .title p {
-        font-size: 50px;
-        margin-top: 10vh;
+        font-size: 10vw;
     }
 
     .about-description {
@@ -409,8 +420,16 @@ footer {
         display: block;
     }
 
+    .title-section {
+        height: 50vw;
+    }
+
+    .title {
+        margin-top: 0.2vh;
+    }
+
     .title p {
-        font-size: 35px;
+        font-size: 10vw;
     }
 
     .about-description {
